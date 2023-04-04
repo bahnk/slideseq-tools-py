@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="slideseq.svg"
+   inkscape:export-filename="/home/hibari/job/babs/032_spatial_transcriptomics/slideseq.png"
+   inkscape:export-xdpi="151.19"
+   inkscape:export-ydpi="151.19"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.4641344"
+     inkscape:cx="1272.2608"
+     inkscape:cy="639.90086"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="362"
+     inkscape:window-y="1232"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path31"
+       sodipodi:type="arc"
+       sodipodi:cx="331.48111"
+       sodipodi:cy="170.2493"
+       sodipodi:rx="80"
+       sodipodi:ry="80"
+       sodipodi:start="0"
+       sodipodi:end="6.2780191"
+       sodipodi:open="true"
+       sodipodi:arc-type="chord"
+       d="m 411.48111,170.2493 a 80,80 0 0 1 -79.89668,79.99993 80,80 0 0 1 -80.10305,-79.79329 80,80 0 0 1 79.68976,-80.206041 80,80 0 0 1 80.3089,79.586111 z" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:43.5453px;line-height:1.25;font-family:'Baekmuk Headline';-inkscape-font-specification:'Baekmuk Headline Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:1.63295"
+       x="331.98187"
+       y="156.70699"
+       id="text2552"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;stroke-width:1.63295"
+         x="331.98187"
+         y="156.70699"
+         id="tspan2928">SLIDE</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';text-align:center;text-anchor:middle;stroke-width:1.63295"
+         x="331.98187"
+         y="212.31378"
+         id="tspan2932">SEQ</tspan></text>
+  </g>
+</svg>

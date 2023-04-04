@@ -1,0 +1,11 @@
+sample,fastq_1,fastq_2,puck,read_structure,genome
+sample1,test/data/sample1_L001.R1.fastq.gz,test/data/sample1_L001.R2.fastq.gz,test/data/sample1.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
+sample1,test/data/sample1_L002.R1.fastq.gz,test/data/sample1_L002.R2.fastq.gz,test/data/sample1.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
+sample1,test/data/sample1_L003.R1.fastq.gz,test/data/sample1_L003.R2.fastq.gz,test/data/sample1.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
+sample1,test/data/sample1_L004.R1.fastq.gz,test/data/sample1_L004.R2.fastq.gz,test/data/sample1.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
+sample1,test/data/sample1_L005.R1.fastq.gz,test/data/sample1_L005.R2.fastq.gz,test/data/sample1.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
+sample2,test/data/sample2_L001.R1.fastq.gz,test/data/sample2_L001.R2.fastq.gz,test/data/sample2.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
+sample2,test/data/sample2_L002.R1.fastq.gz,test/data/sample2_L002.R2.fastq.gz,test/data/sample2.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
+sample2,test/data/sample2_L003.R1.fastq.gz,test/data/sample2_L003.R2.fastq.gz,test/data/sample2.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
+sample2,test/data/sample2_L004.R1.fastq.gz,test/data/sample2_L004.R2.fastq.gz,test/data/sample2.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
+sample2,test/data/sample2_L005.R1.fastq.gz,test/data/sample2_L005.R2.fastq.gz,test/data/sample2.csv,8C18U6C2X9M,/home/hibari/job/aws-igenomes/references/Bacillus_subtilis_168/Ensembl/EB2
