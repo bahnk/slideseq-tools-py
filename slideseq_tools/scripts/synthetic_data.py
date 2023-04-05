@@ -50,7 +50,7 @@ def main(n_samples, n_files, n_reads, read_structure, out_dir, tiff_path, genome
     if not out_dir.exists():
         try:
             os.makedirs(out_dir)
-        except OSError as err:
+        except OSError as _:
             pass
 
     slideseq = SlideSeq(tiff_path=tiff_path, gff_path=gff_path, fasta_path=fasta_path)

@@ -17,7 +17,7 @@ setup(
         "console_scripts": [
             "synthetic_coordinates = slideseq_tools.scripts.synthetic_coordinates:main",
             "synthetic_data = slideseq_tools.scripts.synthetic_data:main",
-            "check_slideseq_samplesheet = slideseq_tools.scripts.check_slideseq_samplesheet:main"
+            "check_slideseq_samplesheet = slideseq_tools.scripts.check_slideseq_samplesheet:main",
         ]
     },
 )

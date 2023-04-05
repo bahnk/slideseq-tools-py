@@ -65,8 +65,9 @@ class SampleSheet:
     path: Path
     original_dframe: None
     dframe: None
+    launch_dir: Path
 
-    def __init__(self, path: str) -> None:
+    def __init__(self, path: str, launch_dir: str = "./") -> None:
         """\
         Constructor taking sample sheet path.
 
@@ -79,6 +80,9 @@ class SampleSheet:
         ----------
         path
             Path of the sample sheet `CSV` file.
+        launch_dir
+            Path of Nextflow launch directory.
+            This helps to resolve relative `FASTQ` paths.
         """
         path = Path(path)
 
@@ -92,6 +96,10 @@ class SampleSheet:
 
         self.original_dframe = dframe
 
+        # we don't raise an exception here because launch dir
+        # can be ignored if FASTQ path are absolute
+        self.launch_dir = Path(launch_dir)
+
     def create_samplesheet(self) -> None:
         """
         Creates sample sheet with additional required columns for downstream
@@ -100,10 +108,42 @@ class SampleSheet:
         sheet_rows = []
 
         for _, row in self.original_dframe.iterrows():
+
+            # allow specifying relative path
+            row["fastq_1"] = self._resolve(row["fastq_1"])
+            row["fastq_2"] = self._resolve(row["fastq_2"])
+            row["puck"] = self._resolve(row["puck"])
+
             sheet_row = SampleSheetRow(**row.to_dict())
             sheet_rows.append(sheet_row.dict())
 
         self.dframe = pd.DataFrame.from_records(sheet_rows)
+
+    def _resolve(self, path: str) -> str:
+        """
+        Resolve `FASTQ` file path if necessary.
+
+        The method checks if the path is absolute. If yes, it returns the
+        absolute path. If the path is relative, then it tries to resolve it
+        using `launch_dir` attribute. If the path can't be resolved, then it
+        raise `FileNotFoundError`.
+
+        Parameters
+        ----------
+        path
+            `FASTQ` file path to check.
+        """
+        path = Path(path)
+
+        if path.is_absolute():
+            return path
+
+        abspath = Path(self.launch_dir) / path
+
+        if not abspath.exists():
+            raise FileNotFoundError(f"{path} and {abspath} don't exist.")
+
+        return str(abspath.absolute())
 
     def save(self, path: str) -> None:
         """
