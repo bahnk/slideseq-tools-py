@@ -94,11 +94,39 @@ class SampleSheet:
         except Exception as exc:
             raise IOError(f"Sample sheet {path} can't be read.") from exc
 
+        self._check_duplicates(dframe)
         self.original_dframe = dframe
 
         # we don't raise an exception here because launch dir
         # can be ignored if FASTQ path are absolute
         self.launch_dir = Path(launch_dir)
+
+    def _check_duplicates(self, dframe: pd.DataFrame) -> None:
+        """
+        Checks if input sample sheet has multiple values for a sample.
+
+        Method raises `ValueError` if there are multiple values for a sample.
+
+        Parameters
+        ----------
+        dframe
+            Pandas dataframe to check.
+        """
+        for sample, sample_df in dframe.groupby("sample"):
+
+            unique_df = sample_df.filter(
+                regex=r"^((?!fastq_[12]).*)$", axis=1
+            ).drop_duplicates()
+
+            # it shouldn't be any duplicate
+            if unique_df.shape[0] == 1:
+                continue
+
+            for column in unique_df:
+                if unique_df[column].drop_duplicates().shape[0] != 1:
+                    raise ValueError(
+                        f"{column} has multiple values for {sample} sample."
+                    )
 
     def create_samplesheet(self) -> None:
         """
