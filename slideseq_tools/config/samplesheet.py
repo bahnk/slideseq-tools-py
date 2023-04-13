@@ -8,7 +8,7 @@ from typing import Dict
 import pandas as pd
 
 # pylint: disable=no-name-in-module
-from pydantic import BaseModel, FilePath, DirectoryPath
+from pydantic import BaseModel, FilePath
 
 from slideseq_tools.config.read_structure import ReadStructure
 
@@ -21,7 +21,7 @@ class SampleSheetRow(BaseModel):
     fastq_2: FilePath
     puck: FilePath
     read_structure: str
-    genome: DirectoryPath
+    genome: str
 
     def min_length(self) -> int:
         """ "Returns minimum read length considering the structure."""
@@ -33,16 +33,6 @@ class SampleSheetRow(BaseModel):
         structure = ReadStructure(self.read_structure)
         return structure.umi_tools_regex()
 
-    def gff_path(self) -> str:
-        """ "Returns GTF file path."""
-        path = Path(self.genome) / "Annotation/Genes/genes.gtf"
-        return str(path)
-
-    def star_index(self) -> str:
-        """ "Returns STAR index directory path."""
-        path = Path(self.genome) / "Sequence/STARIndex"
-        return str(path)
-
     def puck_name(self) -> str:
         """Returns puck name from path."""
         return re.sub(r"\.csv$", "", Path(self.puck).name)
@@ -53,8 +43,6 @@ class SampleSheetRow(BaseModel):
             **super().dict(),
             "min_length": self.min_length(),
             "umi_tools_regex": self.umi_tools_regex(),
-            "gff": self.gff_path(),
-            "star_index": self.star_index(),
             "puck_name": self.puck_name(),
         }
 

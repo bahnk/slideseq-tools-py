@@ -88,7 +88,7 @@ def main(n_samples, n_files, n_reads, read_structure, out_dir, tiff_path, genome
                 "fastq_2": fastq2,
                 "puck": puck_path,
                 "read_structure": read_structure,
-                "genome": genome_path,
+                "genome": genome_path.name,
             }
 
             rows.append(row)
